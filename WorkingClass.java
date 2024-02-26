@@ -7,7 +7,7 @@ public class WorkingClass {
 
     public void InterfaceTesting(){
         SampleInterface s = new SampleInterface() {public void samplecode() {System.out.println("SampleCode Meaning");}};
-        System.out.println(s.x);
+        System.out.println(SampleInterface.x);
         s.samplecode();
     }
 }
