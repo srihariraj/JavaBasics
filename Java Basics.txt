@@ -1,0 +1,23 @@
+Java Basics:
+
+Installation of JDK ✅
+Installation of IDE 
+Testing setup ✅
+Datatypes ✅
+variables ✅
+functions ✅
+standard input and output methods / functions ✅
+public ✅
+protected ✅
+private ✅
+class and objects ✅
+static ✅
+abstract ✅
+interface ✅
+inheritance / extension 
+inheritance / implementation 
+method overriding 
+method overloading 
+lambda expressions
+inner class
+anonymous innerclass
