@@ -5,7 +5,7 @@ interface Interface1 {
 
 // Interface 2
 interface Interface2 {
-    
+
     void method2();
 }
 

@@ -31,8 +31,6 @@ public class Extension {
     public static void main(String[] args) {
         C Obj = new C();
 
-        Obj.testA();
-        System.out.println(" " + Obj.hashCode());
         Obj.testB();
         System.out.println(" " + Obj.hashCode());
         Obj.testC();
