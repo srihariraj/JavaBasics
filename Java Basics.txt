@@ -21,3 +21,504 @@ method overloading
 lambda expressions
 inner class
 anonymous innerclass
+
+
+/////////////////////palindrome//////////////////////
+
+import java.util.Scanner;
+
+public class PalindromeChecker {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        if (isPalindrome(str))
+            System.out.println(str + " is a palindrome.");
+        else
+            System.out.println(str + " is not a palindrome.");
+
+        scanner.close();
+    }
+
+    public static boolean isPalindrome(String str) {
+        int len = str.length();
+        for (int i = 0; i < len / 2; i++) {
+            if (str.charAt(i) != str.charAt(len - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+/////////////////////////////////////////////////////
+
+//////////////////reversed String////////////////////
+
+import java.util.Scanner;
+
+public class StringReverse {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        String reversedString = reverseString(str);
+
+        System.out.println("Reversed string: " + reversedString);
+
+        scanner.close();
+    }
+
+    public static String reverseString(String str) {
+        int len = str.length();
+        StringBuilder reversed = new StringBuilder();
+
+        for (int i = len - 1; i >= 0; i--) {
+            reversed.append(str.charAt(i));
+        }
+
+        return reversed.toString();
+    }
+}
+/////////////////////////////////////////////////////
+
+////replace given charector inside a given string////
+
+import java.util.Scanner;
+
+public class CharacterReplacement {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = scanner.nextLine();
+
+        System.out.print("Enter the character to replace: ");
+        char targetChar = scanner.next().charAt(0);
+
+        System.out.print("Enter the replacement character: ");
+        char replacementChar = scanner.next().charAt(0);
+
+        String replacedString = replaceCharacter(str, targetChar, replacementChar);
+
+        System.out.println("Modified string: " + replacedString);
+
+        scanner.close();
+    }
+
+    public static String replaceCharacter(String str, char target, char replacement) {
+        int len = str.length();
+        StringBuilder modified = new StringBuilder();
+
+        for (int i = 0; i < len; i++) {
+            char currentChar = str.charAt(i);
+            if (currentChar == target) {
+                modified.append(replacement);
+            } else {
+                modified.append(currentChar);
+            }
+        }
+
+        return modified.toString();
+    }
+}
+
+///////////////////////////////////////////////////////
+
+/////////////Quick sort////////////////////////////////
+
+import java.util.*;
+
+public class QuickSort {
+
+    public static void main(String[] args) {
+        List<Integer> nums = new ArrayList<>(Arrays.asList(5, 3, 8, 4, 2, 7, 1, 6));
+        quickSort(nums);
+        System.out.println("Sorted list: " + nums);
+    }
+
+    public static void quickSort(List<Integer> nums) {
+        if (nums == null || nums.size() <= 1) {
+            return;
+        }
+        quickSortHelper(nums, 0, nums.size() - 1);
+    }
+
+    private static void quickSortHelper(List<Integer> nums, int low, int high) {
+        if (low < high) {
+            int pivotIndex = partition(nums, low, high);
+            quickSortHelper(nums, low, pivotIndex - 1);
+            quickSortHelper(nums, pivotIndex + 1, high);
+        }
+    }
+
+    private static int partition(List<Integer> nums, int low, int high) {
+        int pivot = nums.get(high);
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (nums.get(j) <= pivot) {
+                i++;
+                Collections.swap(nums, i, j);
+            }
+        }
+        Collections.swap(nums, i + 1, high);
+        return i + 1;
+    }
+}
+
+
+///////////////////////////////////////////////////////
+
+/////////frequency of charecter in a string////////////
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CharacterFrequency {
+
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        Map<Character, Integer> frequencyMap = findCharacterFrequency(str);
+        
+        // Print the frequency of each character
+        for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) {
+            System.out.println("'" + entry.getKey() + "' occurs " + entry.getValue() + " times.");
+        }
+    }
+
+    public static Map<Character, Integer> findCharacterFrequency(String str) {
+        Map<Character, Integer> frequencyMap = new HashMap<>();
+        
+        // Convert the string to lowercase to ignore case sensitivity
+        str = str.toLowerCase();
+        
+        // Iterate through each character in the string
+        for (char ch : str.toCharArray()) {
+            // Ignore non-alphabetic characters
+            if (Character.isLetter(ch)) {
+                // Increment the frequency count for the character
+                frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+            }
+        }
+        
+        return frequencyMap;
+    }
+}
+
+///////////////////////////////////////////////////////
+
+///////////LIST////////////////////////////////////////
+
+import java.util.*;
+
+public class ListDemo {
+    public static void main(String[] args) {
+        // Create a list
+        List<String> list = new ArrayList<>();
+
+        // Add elements to the list
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Orange");
+
+        // Access elements by index
+        System.out.println("Element at index 1: " + list.get(1));
+
+        // Remove elements
+        list.remove("Banana");
+        System.out.println("After removing Banana: " + list);
+
+        // Iterate over the list
+        System.out.println("List elements:");
+        for (String item : list) {
+            System.out.println(item);
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////////////
+
+//////////////SET-HASHSET////////////////////////////////////////
+
+import java.util.*;
+
+public class SetDemo {
+    public static void main(String[] args) {
+        // Create a set
+        Set<Integer> set = new HashSet<>();
+
+        // Add elements to the set
+        set.add(5);
+        set.add(3);
+        set.add(8);
+
+        // Check if an element exists in the set
+        System.out.println("Contains 3: " + set.contains(3));
+
+        // Remove an element from the set
+        set.remove(5);
+        System.out.println("After removing 5: " + set);
+
+        // Iterate over the set
+        System.out.println("Set elements:");
+        for (int item : set) {
+            System.out.println(item);
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////
+
+///////////////MAP-HASHMAP//////////////////////////////
+
+import java.util.*;
+
+public class MapDemo {
+    public static void main(String[] args) {
+        // Create a map
+        Map<String, Integer> map = new HashMap<>();
+
+        // Add key-value pairs to the map
+        map.put("Apple", 10);
+        map.put("Banana", 5);
+        map.put("Orange", 8);
+
+        // Access value by key
+        System.out.println("Value for key 'Banana': " + map.get("Banana"));
+
+        // Remove a key-value pair from the map
+        map.remove("Banana");
+        System.out.println("After removing 'Banana': " + map);
+
+        // Iterate over the map
+        System.out.println("Map entries:");
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+
+////////////////////////////////////////////////////////
+
+//////////////MATRIX calculator/////////////////////////
+
+import java.util.Scanner;
+
+public class MatrixOperations {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Step 1: Get dimensions of matrices
+        System.out.println("Enter dimensions of the first matrix:");
+        int rows1 = getDimension("Number of rows: ", scanner);
+        int cols1 = getDimension("Number of columns: ", scanner);
+        
+        System.out.println("Enter dimensions of the second matrix:");
+        int rows2 = getDimension("Number of rows: ", scanner);
+        int cols2 = getDimension("Number of columns: ", scanner);
+        
+        // Step 2: Input matrices
+        int[][] matrix1 = inputMatrix(rows1, cols1, "first", scanner);
+        int[][] matrix2 = inputMatrix(rows2, cols2, "second", scanner);
+        
+        // Step 3: Select operation
+        System.out.println("Select an operation:");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Transpose");
+        int option = scanner.nextInt();
+        
+        // Step 4: Perform operation
+        int[][] result;
+        switch (option) {
+            case 1:
+                result = addMatrices(matrix1, matrix2);
+                break;
+            case 2:
+                result = subtractMatrices(matrix1, matrix2);
+                break;
+            case 3:
+                result = multiplyMatrices(matrix1, matrix2);
+                break;
+            case 4:
+                System.out.println("Enter matrix number for transpose (1 or 2):");
+                int matrixNumber = scanner.nextInt();
+                if (matrixNumber == 1) {
+                    result = transposeMatrix(matrix1);
+                } else if (matrixNumber == 2) {
+                    result = transposeMatrix(matrix2);
+                } else {
+                    System.out.println("Invalid matrix number.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Invalid option.");
+                return;
+        }
+        
+        // Step 5: Print result
+        System.out.println("Result:");
+        printMatrix(result);
+        
+        scanner.close();
+    }
+    
+    private static int getDimension(String message, Scanner scanner) {
+        System.out.print(message);
+        return scanner.nextInt();
+    }
+    
+    private static int[][] inputMatrix(int rows, int cols, String name, Scanner scanner) {
+        System.out.println("Enter elements of the " + name + " matrix:");
+        int[][] matrix = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print("Enter element at position (" + (i+1) + "," + (j+1) + "): ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        return matrix;
+    }
+    
+    private static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+        int rows = matrix1.length;
+        int cols = matrix1[0].length;
+        int[][] result = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        return result;
+    }
+    
+    private static int[][] subtractMatrices(int[][] matrix1, int[][] matrix2) {
+        int rows = matrix1.length;
+        int cols = matrix1[0].length;
+        int[][] result = new int[rows][cols];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[i][j] = matrix1[i][j] - matrix2[i][j];
+            }
+        }
+        return result;
+    }
+    
+    private static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
+        int rows1 = matrix1.length;
+        int cols1 = matrix1[0].length;
+        int rows2 = matrix2.length;
+        int cols2 = matrix2[0].length;
+        if (cols1 != rows2) {
+            System.out.println("Error: Number of columns of first matrix must be equal to number of rows of second matrix.");
+            return null;
+        }
+        int[][] result = new int[rows1][cols2];
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < cols2; j++) {
+                for (int k = 0; k < cols1; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        return result;
+    }
+    
+    private static int[][] transposeMatrix(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int[][] result = new int[cols][rows];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                result[j][i] = matrix[i][j];
+            }
+        }
+        return result;
+    }
+    
+    private static void printMatrix(int[][] matrix) {
+        System.out.println("[");
+        for (int[] row : matrix) {
+            System.out.print(" [");
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println("]");
+        }
+        System.out.println("]");
+    }
+}
+
+
+/////////////////////////////////////////////////////////
+
+/////////sum of digits using for/////////////////////////
+
+import java.util.Scanner;
+
+public class SumOfDigitsForLoop {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        
+        int sum = 0;
+        int temp = num;
+        
+        for (; temp != 0; temp /= 10) {
+            int digit = temp % 10;
+            sum += digit;
+        }
+        
+        System.out.println("Sum of digits of " + num + " is: " + sum);
+        scanner.close();
+    }
+}
+
+/////////////////////////////////////////////////////////
+
+////////Armstrong number check///////////////////////////
+
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        
+        if (isArmstrong(number)) {
+            System.out.println(number + " is an Armstrong number.");
+        } else {
+            System.out.println(number + " is not an Armstrong number.");
+        }
+        
+        scanner.close();
+    }
+    
+    public static boolean isArmstrong(int number) {
+        int originalNumber = number, sum = 0;
+        int digits = String.valueOf(number).length();
+        
+        while (number > 0) {
+            int digit = number % 10;
+            sum += Math.pow(digit, digits);
+            number /= 10;
+        }
+        
+        return sum == originalNumber;
+    }
+}
+
+///////////////////////////////////////////////////////////
