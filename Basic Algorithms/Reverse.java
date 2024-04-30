@@ -4,7 +4,7 @@ public class Reverse {
     public static void main(String[] args) {
         Scanner S = new Scanner(System.in);
 
-        System.out.println("Enter the Text");
+        System.out.println("Enter the Texts");
         String text = S.nextLine();
         StringBuilder X = new StringBuilder();
         String Result = "";
