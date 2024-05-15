@@ -16,19 +16,21 @@ public class ArraysProgram {
                 array[i][j] = input.nextInt();
             }
         }
+        System.out.println();
 
         System.out.println("foreachloop");
 
         for (int[] x : array) {
             for (int y : x) {
-                System.out.print(y + "\t");
+                System.out.print(y + " ");
             }
             System.out.println();
         }
+        System.out.println();
 
-        System.out.println("for loop\n");
-        for (int k = 0; k < array[0].length; k++) {
-            for (int u = 0; u < array.length; u++) {
+        System.out.println("for loop");
+        for (int k = 0; k < array.length; k++) {
+            for (int u = 0; u < array[0].length; u++) {
                 System.out.print(array[k][u] + " ");
             }
             System.out.println();

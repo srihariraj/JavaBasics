@@ -1,0 +1,119 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": ".\/bin\/${file}"
+        },
+        {
+            "type": "java",
+            "name": "Addition",
+            "request": "launch",
+            "mainClass": "Addition",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "Armstrong",
+            "request": "launch",
+            "mainClass": "Armstrong",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "ArraysProgram",
+            "request": "launch",
+            "mainClass": "ArraysProgram",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "DiagonalStarPattern",
+            "request": "launch",
+            "mainClass": "DiagonalStarPattern",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "EvenOddChecker",
+            "request": "launch",
+            "mainClass": "EvenOddChecker",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "Factorial",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "Multiplication",
+            "request": "launch",
+            "mainClass": "Multiplication",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "NumberOfDigits",
+            "request": "launch",
+            "mainClass": "NumberOfDigits",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "PowFunction",
+            "request": "launch",
+            "mainClass": "PowFunction",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "Reverse",
+            "request": "launch",
+            "mainClass": "Reverse",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "ReverseNumber",
+            "request": "launch",
+            "mainClass": "ReverseNumber",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "StarPattern",
+            "request": "launch",
+            "mainClass": "StarPattern",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "SumOfDigits",
+            "request": "launch",
+            "mainClass": "SumOfDigits",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
+            "name": "newclass",
+            "request": "launch",
+            "mainClass": "newclass",
+            "projectName": "JavaBasics_14759599"
+        }
+    ]
+}
