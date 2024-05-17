@@ -522,3 +522,27 @@ public class ArmstrongNumber {
 }
 
 ///////////////////////////////////////////////////////////
+
+
+
+
+
+MultiThreading:
+Process:
+Threads:
+conventional programming(Single threaded or consecutive execution)
+OS->Application->process->thread
+OS->process->thread
+JVM->process->thread
+
+Thread A;
+
+A.start();->Decided by JVM
+//A.start()->run()->complete all tasks->exit.
+
+A.run()->complete all tasks->exit.
+//dev decided execution.
+
+main()t1()t2()t3()t4()t5(){
+
+} 
