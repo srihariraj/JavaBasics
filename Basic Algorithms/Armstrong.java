@@ -25,9 +25,9 @@ public class Armstrong {
             num /= 10;
         }
         if (ans == originalNum) {
-            System.out.print("It is Armstrong number");
+            System.out.println("It is Armstrong number");
         } else
-            System.out.print("It is not armstrong number");
+            System.out.println("It is not armstrong number");
     }
 }
 
