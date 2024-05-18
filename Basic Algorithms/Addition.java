@@ -10,7 +10,6 @@ public class Addition {
         int Ans = a + b;
 
         System.out.println("Answer is " + Ans);
-
         x.close();
 
     }

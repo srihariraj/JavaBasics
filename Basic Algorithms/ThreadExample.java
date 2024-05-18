@@ -15,16 +15,23 @@ public class ThreadExample extends Thread {
         ThreadExample t5 = new ThreadExample();
         t5.setName("E");
         t5.start();
+        t1.
 
     }
 
     public void run() {
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 20; i++) {
             String name = Thread.currentThread().getName();
             switch (name) {
                 case "A": {
                     System.out.println(name + i);
+                    try {
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
                     break;
                 }
                 case "B": {

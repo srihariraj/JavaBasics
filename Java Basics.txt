@@ -543,6 +543,39 @@ A.start();->Decided by JVM
 A.run()->complete all tasks->exit.
 //dev decided execution.
 
-main()t1()t2()t3()t4()t5(){
-
-} 
+Thread methods:
+start(); // This method is used to start a new thread. It calls the run() method.
+run(); // This method contains the code that the thread will execute when it is started.
+join(); // This method waits for the thread on which it is called to die.
+sleep(); // This method puts the thread to sleep for a specified amount of time. It needs a try-catch block or throws exception.
+interrupt(); // This method interrupts the thread on which it is called.
+isAlive(); // This method checks if the thread is alive.
+isInterrupted(); // This method checks if the thread has been interrupted.
+wait(); // This method waits for another thread to notify it.
+notify(); // This method wakes up a single thread that is waiting on the object's monitor.
+notifyAll(); // This method wakes up all threads that are waiting on the object's monitor.
+getName(); // This method returns the name of the thread.
+setName(); // This method sets the name of the thread.
+getPriority(); // This method returns the priority of the thread.
+setPriority(); // This method sets the priority of the thread.
+synchronized keyword // This keyword is used to ensure that only one thread can access a method or a block of code at a time.
+currentThread(); // This method returns a reference to the currently executing thread.
+yield(); // This method causes the currently executing thread to pause and allow other threads to execute.
+suspend(); // This method suspends the execution of the thread on which it is called.
+resume(); // This method resumes the execution of the thread that was suspended using the suspend() method.
+destroy(); // This method is used to destroy the thread on which it is called.
+getId(); // This method returns the identifier of the thread.
+getThreadGroup(); // This method returns the thread group to which the thread belongs.
+holdsLock(Object obj); // This method returns true if and only if the current thread holds the monitor lock on the specified object.
+interrupted(); // This method tests whether the current thread has been interrupted.
+setDaemon(boolean on); // This method marks the thread as a daemon thread or a user thread.
+checkAccess(); // This method determines if the currently running thread has permission to modify the thread.
+countStackFrames(); // This method returns the number of stack frames in the thread.
+enumerate(Thread tarray[]); // This method copies all the threads in the current thread's thread group and its subgroups into the specified array.
+getContextClassLoader(); // This method returns the context ClassLoader for the thread.
+setContextClassLoader(ClassLoader cl); // This method sets the context ClassLoader for the thread.
+getDefaultUncaughtExceptionHandler(); // This method returns the default handler invoked when a thread abruptly terminates due to an uncaught exception.
+setDefaultUncaughtExceptionHandler(Thread.UncaughtExceptionHandler eh); // This method sets the default handler invoked when a thread abruptly terminates due to an uncaught exception.
+getState(); // This method returns the state of the thread.
+getStackTrace(); // This method returns an array of StackTraceElement objects representing the current thread's stack dump.
+getAllStackTraces(); // This method returns a map of stack traces for all live threads.

@@ -6,9 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ThreadExample",
+            "request": "launch",
+            "mainClass": "ThreadExample",
+            "projectName": "JavaBasics_14759599"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
-            "mainClass": ".\/bin\/${file}"
+            "mainClass": "./bin/${file}"
         },
         {
             "type": "java",
