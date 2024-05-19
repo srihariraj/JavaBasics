@@ -66,12 +66,20 @@ class TransportLorry {
 }
 
 public class DoorDelivery {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws InterruptedException {
+        long start = System.currentTimeMillis();
         TransportLorry transportLorry = new TransportLorry();
         Vendor vendor = new Vendor(transportLorry);
         User user = new User(transportLorry);
 
         vendor.start();
         user.start();
+        vendor.join();
+        user.join();
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("Exec time: " + (end - start) + " ms");
     }
 }
