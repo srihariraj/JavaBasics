@@ -15,7 +15,6 @@ public class ThreadExample extends Thread {
         ThreadExample t5 = new ThreadExample();
         t5.setName("E");
         t5.start();
-        t1.
 
     }
 
