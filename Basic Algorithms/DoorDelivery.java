@@ -10,11 +10,12 @@ class Vendor extends Thread {
     }
 
     public void run() {
-        List<String> fruits = Arrays.asList("apple", "banana", "cherry", "date", "elderberry", "fig", "grape",
-                "honeydew", "kiwi", "lemon");
+        List<String> fruits = Arrays.asList("1", "2", "3", "4", "5", "6", "7",
+                "8", "9", "10");
         for (String fruit : fruits) {
+            System.out.println("Loading :" + fruit);
             transportLorry.load(fruit);
-            System.out.println("Loaded :" + fruit);
+
         }
     }
 }
@@ -77,9 +78,7 @@ public class DoorDelivery {
         user.start();
         vendor.join();
         user.join();
-
         long end = System.currentTimeMillis();
-
-        System.out.println("Exec time: " + (end - start) + " ms");
+        System.out.println("\nExec time: " + (end - start) + " ms");
     }
 }
