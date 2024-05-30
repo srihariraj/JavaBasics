@@ -14,5 +14,6 @@ public class SumOfDigits {
         }
 
         System.out.println("Sum Of Digits of the number is : " + ans);
+        scan.close();
     }
 }
