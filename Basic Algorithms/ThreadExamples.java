@@ -52,6 +52,6 @@ public class ThreadExamples {
         classroom.join();
         cultural.join();
         long msE = System.currentTimeMillis();
-        System.out.println((msE - msS) + "ms taken for execution");
+        System.out.println((msE - msS) + " ms taken for execution");
     }
 }
