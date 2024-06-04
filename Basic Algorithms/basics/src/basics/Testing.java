@@ -1,8 +1,4 @@
-package basics;
-
-public class Testing {
-
-	public static void main(String[] args) {
+void main() {
 		// TODO Auto-generated method stub
 		long start=System.currentTimeMillis();
 		long count=0L;
