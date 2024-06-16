@@ -4,12 +4,13 @@ public class Factorial {
     public static void main(String[] args) {
         Scanner X = new Scanner(System.in);
         System.out.println("Enter a number");
-        int x = X.nextInt();
-        int ans = 1;
+        long x = X.nextInt();
+        long ans = 1;
 
         for (; x > 0; x--) {
 
             ans *= x;
+            System.out.println(ans);
         }
 
         System.out.println("Factorial of the number is " + ans);

@@ -22,7 +22,7 @@ public class SparkPattern {
             }
             System.out.println();
         } // upper spark
-        for (int k = 1; k <= size; k++) { // least to highest
+        for (int k = 1; k <= size; k++) { // lowest to highest
             System.out.print("**");
         } // joining line
         System.out.println();
