@@ -608,3 +608,51 @@ getStackTrace(); // This method returns an array of StackTraceElement objects re
 getAllStackTraces(); // This method returns a map of stack traces for all live threads.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Operators, Keywords, Identifiers, 
+variables
+
+Java Datatypes 
+
+Control Statements
+
+Data Structures & Arrays
+
+Java using Scanner 
+
+Basic Program execution
+
+		OOPS=>>
+
+Classes and Objects 
+
+Object creation
+
+Reference variable 
+
+Global and local variables
+
+Constructors
+
+Aggregation
+
+Composition
+
+Inheritance
+
+Polymorphism
